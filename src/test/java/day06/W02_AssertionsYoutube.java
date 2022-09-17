@@ -5,7 +5,9 @@ import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
@@ -28,28 +30,43 @@ public class W02_AssertionsYoutube {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get("https://www.youtube.com");
+        driver.findElement(By.xpath("//*[text()='I Agree']")).click();
     }
 
     //○ titleTest => Sayfa başlığının “YouTube” oldugunu test edin
     @Test
     public void titleTest(){
-        String expectedTitle="https://www.youtube.com";
+        String expectedTitle="YouTube";
         String actualTitle= driver.getTitle();
         Assert.assertEquals("Sayfa title'i beklenenden farkli",expectedTitle,actualTitle);
     }
 
     //○ imageTest => YouTube resminin görüntülendiğini (isDisplayed()) test edin
     @Test
-    public void imageTest(){
-        
+    public void logoTesti(){
+        WebElement logo= driver.findElement(By.xpath("(yt-icon[@id='logo-icon'])[1]"));
+        Assert.assertTrue("Logo gorunmuyor", logo.isDisplayed());
+    }
+
+    //○ Search Box 'in erisilebilir oldugunu test edin (isEnabled())
+    @Test
+    public void aramaKutusuTesti(){
+        WebElement aramaKutusu= driver.findElement(By.xpath("//input[@id='search']"));
+        Assert.assertTrue("Arama kutusuna ulasilamiyor", aramaKutusu.isEnabled());
+    }
+
+    //○ wrongTitleTest => Sayfa basliginin “youtube” olmadigini dogrulayin
+    @Test
+    public void yanlisTitleTesti(){
+        String istenmeyenBaslik="youtube";
+        String actualTitle= driver.getTitle();
+        Assert.assertNotEquals("Title istenmeyen kelimeye esit", istenmeyenBaslik, actualTitle);
     }
 
 
-
-
     @AfterClass
-    public void tearDown(){
-        driver.close();
+    static public void tearDown(){
+       driver.close();
     }
 
 
