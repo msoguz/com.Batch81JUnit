@@ -35,15 +35,16 @@ public class C02_Assertion {
 
     @AfterClass
     public static void tearDovn(){
-        //driver.close();
+        driver.close();
     }
 
     @Test
     public void test1(){
-       // a-Url'nin amaozon icerdigini test edelim
-        String expectedUrl="amazon";
+       // a-Url'nin facebook icerdigini test edelim
+        String expectedUrl="faccebook";
         String actualUrl= driver.getCurrentUrl();
-      //  Assert.assertEquals(actualUrl.contains(expectedUrl));
+       //Assert.assertFalse(actualUrl.contains(expectedUrl));
+       //Assert.assertNotEquals(expectedUrl,actualUrl);
     }
 
     @Test
@@ -53,10 +54,20 @@ public class C02_Assertion {
         String expectedTitle="facebook";
         Assert.assertFalse(actualTitle.contains(expectedTitle));
     }
+
+    //c-sol ust kosede amazon logosunun gorundugunu test edelim.
     @Test
     public void test3(){
         WebElement logo= driver.findElement(By.id("nav-logo-sprites"));
         Assert.assertTrue(logo.isDisplayed());
+
+    }
+    //d- Url'in www.facebook.com oldugunu test edin.
+    @Test
+    public void test4(){
+        String expectedUrl="www.facebook.com";
+        String actualUrl=driver.getCurrentUrl();
+        Assert.assertNotEquals(expectedUrl,actualUrl);
 
     }
 

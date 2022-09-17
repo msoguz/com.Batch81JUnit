@@ -38,26 +38,26 @@ public class C03_Assertions {
     }
     @Test
     public void test1(){
-        // ○ Sayfa URL’inin https://www.bestbuy.com/ ‘a esit oldugunu test edin
+        //  Sayfa URL’inin https://www.bestbuy.com/ ‘a esit oldugunu test edin
         String expectedUrl = "https://www.bestbuy.com/";
         String actualUrl = driver.getCurrentUrl();
         Assert.assertEquals(expectedUrl,actualUrl);
     }
     @Test
     public void test2() {
-        //○ titleTest => Sayfa başlığının “Rest” içermediğini(contains) test edin
+        // titleTest => Sayfa başlığının “Rest” içermediğini(contains) test edin
         String expectedTitle = "Rest";
         String actualTitle = driver.getTitle();
         Assert.assertFalse(actualTitle.contains(expectedTitle));
     }
     @Test
     public void test3() {
-        //○ logoTest => BestBuy logosunun görüntülendigini test edin
+        // logoTest => BestBuy logosunun görüntülendigini test edin
         Assert.assertTrue(driver.findElement(By.xpath("(//*[@class='logo'])[1]")).isDisplayed());
     }
     @Test
     public void test4() {
-        //○ FrancaisLinkTest => Fransizca Linkin görüntülendiğini test edin
+        // FrancaisLinkTest => Fransizca Linkin görüntülendiğini test edin
         Assert.assertTrue(driver.findElement(By.xpath("//*[text()='Français']")).isDisplayed());
     }
 }

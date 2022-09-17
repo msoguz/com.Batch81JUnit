@@ -57,7 +57,7 @@ public class C04_Assertions {
     }
     @Test
     public void test4() {
-//* wrongTitleTest => Sayfa basliginin “youtube” olmadigini dogrulayin
+    //* wrongTitleTest => Sayfa basliginin “youtube” olmadigini dogrulayin
         String actualTitle = driver.getTitle();
         String unExpectedTitle = "youtube";
         Assert.assertNotEquals(unExpectedTitle, actualTitle);
