@@ -35,14 +35,14 @@ public class C02_WindowHandle {
         Eger bize verilen task'ta sayflar arasi gecis varsa her river.get() methodundan sonra
         driver'in window handle degerini String bir degiskene atariz.
         Sonrasinda farkli bir sayfaya ya da sekmeye gittikten sonra ilk sayfaya donmemiz istenirse
-        String degisken
+        String degiskene atadigimiz window handle degerleriyle sayfalar arasi gecis yapabiliriz.
          */
         //2- Url'nin amazon içerdiğini test edelim
         String expectedUrl="amazon";
         String actualUrl=driver.getCurrentUrl();
         Assert.assertTrue(actualUrl.contains(expectedUrl));
         //3- Yeni bir pencere açıp bestbuy anasayfasına gidelim.(https://www.bestbuy.com)
-        driver.switchTo().newWindow(WindowType.WINDOW);
+        driver.switchTo().newWindow(WindowType.WINDOW); // Yeni bir pencere acmak icin bu methodu kullandik.
         driver.get("https://www.bestbuy.com");
         String bestBuyWindowHandle= driver.getWindowHandle();
         //4- title'in BestBuy içerdiğini test edelim
