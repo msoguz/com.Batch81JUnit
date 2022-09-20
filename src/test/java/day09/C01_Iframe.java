@@ -31,7 +31,7 @@ public class C01_Iframe {
 
     @After
     public void tearDown(){
-        driver.close();
+        //driver.close();
     }
     @Test
     public void test1() throws InterruptedException {
