@@ -41,7 +41,7 @@ public class C02_Assertion {
     @Test
     public void test1(){
        // a-Url'nin facebook icerdigini test edelim
-        String expectedUrl="faccebook";
+        String expectedUrl="facebook";
         String actualUrl= driver.getCurrentUrl();
        //Assert.assertFalse(actualUrl.contains(expectedUrl));
        //Assert.assertNotEquals(expectedUrl,actualUrl);

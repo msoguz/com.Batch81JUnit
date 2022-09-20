@@ -27,16 +27,29 @@ public class C01_Allerts {
 
     }
 
+    /*
+    Herhangi bir web sitesine gidince veya bir web sitesinde herhangi bir islem yaptigimizda
+    ortaya cikan uyarilara alert diyoruz.
+    Eger bir alert inspect yapilabiliyorsa, o laert otomasyon ile kullanilabilir, bu tur
+    alert'lere HTML alert denir ve bunlar icin extra bir islem yapmaya gerek yoktur.
+    Tum webelement'ler gibi locate edip istedigimiz islemleri yapabiliriz,
+    driver.get("https://www.facebook.com")'da cikan alert vb.
+
+    Ancak web uygulamalarinda HTML alert yaninda java script alert de bulunabilir,
+    JS alert'ler locate edilemezler.
+    Selenium'da JS alert'ler icin ozel bir yontem gelistirilmistir.
+     */
+
     @Test
     public void test1() throws InterruptedException {
         //-https://the-internet.herokuapp.com/javascript_alerts adresine gidelim
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 
-        //-Click for js Alert butonuna tiklayalim
+        //-"Click for js Alert" butonuna tiklayalim
         driver.findElement(By.xpath("//*[text()='Click for JS Alert']")).click();
 
         //-Tikladiktan sonra cikan uyari mesajina (alerte) tamam diyelim.
         Thread.sleep(2000);
-        driver.switchTo().alert();
+        driver.switchTo().alert().accept();
     }
 }

@@ -17,7 +17,7 @@ public class C02_Allerts {
     Bir web sitesine girdigimizde karsimiza bir uyari ya da bir buttona tikladigimizda bir uyari(alert)
     cikabilir. Eger bu uyariya incele(mouse sag tik-inspect) yapabiliyorsak bu tur alertlere HTML alert denir
     ve istedigimiz locate'i alabiliriz. Ama gelen uyari kutusuna mudehale (sag tik -incele) edemiyorsak bu tur
-    alertlere Java Script alert denir. Java Script alertleremudehale edebilme  icin
+    alertlere Java Script alert denir. Java Script alertleremudehale edebilmek  icin
     - tamam ya da ok icin; driver.switchTo().alert().accept() methodu kullanilir.
     - iptal icin; driver.switchTo().alert().dismiss() methodu kullanilir.
     - Alert icindeki mesaji almak icin; driver.switchTo().alert().getText() methodu kullanilir.
