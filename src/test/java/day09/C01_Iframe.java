@@ -44,8 +44,13 @@ public class C01_Iframe {
         System.out.println(iframeYazisi.getText());
 
         //Text Box’a “Merhaba Dunya!” yazin.
+        /*
+        textbox'i dogru olarak locate etmemize ragmen driver bulamadi.
+        Bunun uzerine HTML kodlari inceleyince textbox'in aslinda bir Iframe icerisinde oldugunu gorduk
+        Bu durumda once Iframe'i locate edip switchTo() ile o Iframe'e gecmeliyiz.
+         */
         WebElement textBox= driver.findElement(By.id("mce_0_ifr")); //Frame'e gecis yapmadan once orayi id ile locate ederiz.
-        driver.switchTo().frame(textBox);//Locate ettigiiz frame'e gecmek icin bu method'u kullaniriz.
+        driver.switchTo().frame(textBox);//Locate ettigimiz frame'e gecmek icin bu method'u kullaniriz.
 
         WebElement textBoxFrame= driver.findElement(By.xpath("//p"));
         textBoxFrame.clear();//clear() method'u tex box'in icini temizler.
