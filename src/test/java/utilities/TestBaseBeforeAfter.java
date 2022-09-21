@@ -6,17 +6,21 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
 
 public abstract class TestBaseBeforeAfter { // abstract osa da olur olmasa da olur.
     protected WebDriver driver;    //public de olabilir.
+    protected Actions actions;
+
     @Before
     public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        actions=new Actions(driver);
 
     }
 
