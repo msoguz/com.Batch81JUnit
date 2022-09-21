@@ -1,5 +1,6 @@
 package day11;
 
+import com.github.javafaker.Faker;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -19,6 +20,9 @@ public class C02_Actions extends TestBaseBeforeAfter {
         //3- Ad, soyad, mail ve sifre kutularina deger yazalim ve kaydol tusuna basalim
         //Actions actions=new Actions(driver); //TestBaseBeforeAfter classinda tanimladigi icin extends oldugundan burada tekara tanimlamadik.
         WebElement isim = driver.findElement(By.xpath("(//*[@class='inputtext _58mg _5dba _2ph-'])[1]"));
+        Faker faker=new Faker();
+        String email=faker.internet().emailAddress();
+
         isim.sendKeys("Sener");
         actions.sendKeys(Keys.TAB)
                 .sendKeys("Oguz")
