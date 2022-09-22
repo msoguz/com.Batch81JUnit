@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public abstract class TestBaseBeforeClassAfterClass { //Abstract olmayabilir. abstract olursa obje olusturamiyoruz.
+    // Abstract yapmamizin sebebi, bu class'tan obje uretilmesinin onune gecmektir.
 
     protected static WebDriver driver;    //public de olabilir.
     @Before

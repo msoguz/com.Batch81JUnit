@@ -10,7 +10,9 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
 
-public abstract class TestBaseBeforeAfter { // abstract osa da olur olmasa da olur.
+public abstract class TestBaseBeforeAfter { // abstract olsa da olur olmasa da olur.
+    // Abstract yapmamizin sebebi, bu class'tan obje uretilmesinin onune gecmektir.
+
     protected WebDriver driver;    //public de olabilir.
     protected Actions actions;
 
@@ -19,7 +21,7 @@ public abstract class TestBaseBeforeAfter { // abstract osa da olur olmasa da ol
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+       // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         actions=new Actions(driver);
 
     }
