@@ -28,7 +28,9 @@ public class C01_ActionsKeyUpKeyDown extends TestBaseBeforeAfter {
                                  .keyDown(Keys.SHIFT) // shift tusuna bastik.
                                  .sendKeys("a")
                                  .keyUp(Keys.SHIFT) //shift'ten ciktik.
-                                 .sendKeys("7").sendKeys("1").sendKeys(Keys.ENTER)
+                                 .sendKeys("7")
+                                 .sendKeys("1")
+                                 .sendKeys(Keys.ENTER)
                                  .perform();
 
         //aramanin gerceklestigini test edin

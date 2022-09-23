@@ -18,7 +18,8 @@ public class C03_SenkronizasyonWait extends TestBaseBeforeAfter {
         //Bir class olusturun : WaitTest
         //Iki tane metod olusturun : implicitWait() , explicitWait()
         /*
-        implicitlyWait kullandigimiz bu methodda sayfadaki butun webelement'ler icin max belirttigimiz sure altinda butun webelementler
+        implicitlyWait kullandigimiz bu methodda sayfadaki butun webelement'ler icin max belirttigimiz sure altinda
+        butun webelementler icin bekler.
 
          */
 
