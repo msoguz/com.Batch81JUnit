@@ -10,7 +10,7 @@ import utilities.TestBaseBeforeAfter;
 
 public class C02_Actions extends TestBaseBeforeAfter {
     @Test
-    public void test01() {
+    public void test01() throws InterruptedException {
         //1- https://www.facebook.com adresine gidelim
         driver.get("https://www.facebook.com");
 
