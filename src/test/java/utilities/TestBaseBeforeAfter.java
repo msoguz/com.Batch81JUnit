@@ -21,7 +21,7 @@ public abstract class TestBaseBeforeAfter { // abstract olsa da olur olmasa da o
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
         driver.manage().window().maximize();
-       // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         actions=new Actions(driver);
 
     }
