@@ -2,7 +2,9 @@ package utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -12,7 +14,7 @@ public abstract class TestBaseBeforeClassAfterClass { //Abstract olmayabilir. ab
     // Abstract yapmamizin sebebi, bu class'tan obje uretilmesinin onune gecmektir.
 
     protected static WebDriver driver;    //public de olabilir.
-    @Before
+    @BeforeClass
     public static void setUp(){
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
@@ -22,7 +24,7 @@ public abstract class TestBaseBeforeClassAfterClass { //Abstract olmayabilir. ab
     }
 
 
-    @After
+    @AfterClass
     public static void tearDown(){
         //  driver.quit();
     }

@@ -32,7 +32,7 @@ public class C04_GetScreenShot extends TestBaseBeforeAfter {
         TakesScreenshot ts= (TakesScreenshot) driver;
 
         File tumSayfaResmi=ts.getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(tumSayfaResmi,new File("target/ekranGoruntusu/amazonallPage"+tarih+".jpeg"));
+        FileUtils.copyFile(tumSayfaResmi,new File("target/ekranGoruntuleri/amazonallPage"+tarih+".jpeg"));
         System.out.println(tarih);
 
     }

@@ -19,7 +19,7 @@ public class C02_WriteExcel {
         FileInputStream fis=new FileInputStream(dosyaYolu);
         Workbook workbook= WorkbookFactory.create(fis);
 
-        //4) 4.hucreye yeni bir cell olusturalim
+        //4) 5.hucreye yeni bir cell olusturalim
         //5) Olusturdugumuz hucreye “Nufus” yazdiralim
         workbook.getSheet("Sayfa1").getRow(0).createCell(4).setCellValue("Nufus");
 
