@@ -29,10 +29,11 @@ public class C03_BeforeClassAfterClass {
         driver.close();
     }
 
-    @Test
+
     @Ignore  ("Ahmet'in testi ... gibi aciklama da konabilir.")
             // Calismasini istemedigimiz methodun basina @Ignore notasyonu kullanilir. Genelde ornegin 2 kisi bir projede calisirken
             // baskasinin methodlarini calistirmayacaksak mthodun basina @Ignore notasyonu konur.
+    @Test
     public void method1(){
         driver.get("https://amazon.com");
     }

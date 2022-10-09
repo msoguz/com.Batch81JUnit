@@ -22,12 +22,12 @@ public class W03_Test02 {
         WebElement signinButonu= driver.findElement(By.id("signin_button"));
         signinButonu.click();
 
-        //3. Login alanine “username” yazdirin
+        //3. Login alanina “username” yazdirin
         WebElement loginYazma= driver.findElement(By.xpath("//input[@type='text']"));
         loginYazma.sendKeys("username");
 
 
-        //4. Password alanine “password” yazdirin
+        //4. Password alanina “password” yazdirin
         WebElement userYazma= driver.findElement(By.xpath("//input[@id='user_password']"));
         userYazma.sendKeys("password");
 

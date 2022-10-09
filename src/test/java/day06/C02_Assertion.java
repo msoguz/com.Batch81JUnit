@@ -51,8 +51,8 @@ public class C02_Assertion {
     public void test2(){
     //b-Title'in facebook icermedigini test edelim
         String actualTitle= driver.getTitle();
-        String expectedTitle="facebook";
-        Assert.assertFalse(actualTitle.contains(expectedTitle));
+        String arananKelime="facebook";
+        Assert.assertFalse(actualTitle.contains(arananKelime));
     }
 
     //c-sol ust kosede amazon logosunun gorundugunu test edelim.
