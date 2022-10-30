@@ -24,7 +24,7 @@ public class C01_GetScreenShotWE extends TestBaseBeforeAfter {
         WebElement aramaSonucu= driver.findElement(By.xpath("//h1[@class='a-size-base s-desktop-toolbar a-text-normal']"));
         File nutellaAramaSonucu=aramaSonucu.getScreenshotAs(OutputType.FILE);
 
-        //Sadece webelementin rresmini alacaksak TakeScreenShot class'ini kullanmama gerek yok.
+        //Sadece webelementin resmini alacaksak TakeScreenShot class'ini kullanmama gerek yok.
         //Locate ettigimiz webelement'i direkt geccici bir file'e atip FileUtils ile kopyalayip yolunu(path) belirtiriz.
         FileUtils.copyFile(nutellaAramaSonucu,new File("target/ekranGoruntuleri/WebESS.jpeg"));
 
